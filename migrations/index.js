@@ -137,3 +137,5 @@ async function migrate(book) {
 }
  
 await client.close();
+
+const documents = await collection.aggregate(aggregationPipelines).toArray();
